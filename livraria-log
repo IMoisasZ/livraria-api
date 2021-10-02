@@ -1,0 +1,93 @@
+2021-09-30T12:53:19.549Z [livraria-api] error GET  - notNull Violation: cliente.nome cannot be null,
+notNull Violation: cliente.email cannot be null,
+notNull Violation: cliente.senha cannot be null,
+notNull Violation: cliente.telefone cannot be null,
+notNull Violation: cliente.endereco cannot be null
+2021-09-30T12:54:10.974Z [livraria-api] error GET  - notNull Violation: cliente.nome cannot be null,
+notNull Violation: cliente.email cannot be null,
+notNull Violation: cliente.senha cannot be null,
+notNull Violation: cliente.telefone cannot be null,
+notNull Violation: cliente.endereco cannot be null
+2021-09-30T12:55:08.421Z [livraria-api] error GET  - cliente_id is not defined
+2021-09-30T12:56:18.572Z [livraria-api] error GET  - senha is not defined
+2021-09-30T13:12:14.496Z [livraria-api] error DELETE  - ClienteRepository.delteCliente is not a function
+2021-09-30T13:51:45.016Z [livraria-api] error GET  - Table 'desafio.venddas' doesn't exist
+2021-09-30T14:15:26.290Z [livraria-api] error GET  - Unknown column 'id_autor' in 'field list'
+2021-09-30T14:57:31.165Z [livraria-api] error POST  - LivroModulo.createLivro is not a function
+2021-09-30T14:59:01.257Z [livraria-api] error POST  - Cannot add or update a child row: a foreign key constraint fails (`desafio`.`livros`, CONSTRAINT `livros_ibfk_1` FOREIGN KEY (`autor_id`) REFERENCES `autores` (`autor_id`))
+2021-09-30T15:01:34.723Z [livraria-api] error DELETE  - Missing where or truncate attribute in the options parameter of model.destroy.
+2021-09-30T15:04:52.345Z [livraria-api] error DELETE  - Missing where or truncate attribute in the options parameter of model.destroy.
+2021-09-30T15:04:56.559Z [livraria-api] error DELETE  - Missing where or truncate attribute in the options parameter of model.destroy.
+2021-09-30T15:07:45.702Z [livraria-api] error DELETE  - Missing where or truncate attribute in the options parameter of model.destroy.
+2021-09-30T15:07:52.526Z [livraria-api] error DELETE  - Missing where or truncate attribute in the options parameter of model.destroy.
+2021-09-30T15:08:06.636Z [livraria-api] error DELETE  - Missing where or truncate attribute in the options parameter of model.destroy.
+2021-09-30T15:08:45.315Z [livraria-api] error DELETE  - Missing where or truncate attribute in the options parameter of model.destroy.
+2021-09-30T15:08:53.588Z [livraria-api] error DELETE  - Missing where or truncate attribute in the options parameter of model.destroy.
+2021-09-30T15:24:27.154Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-30T15:24:40.111Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-30T15:24:46.157Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-30T15:24:51.444Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-30T15:25:25.395Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-30T15:26:55.249Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-30T15:30:57.689Z [livraria-api] error DELETE  - Existe venda(s) para o cliente de ID 13!
+2021-09-30T15:31:13.868Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-30T15:31:36.918Z [livraria-api] error DELETE  - Existe venda(s) para o cliente de ID 14!
+2021-09-30T15:32:18.199Z [livraria-api] error DELETE  - Existe venda(s) para o cliente de ID 13!
+2021-09-30T15:32:37.800Z [livraria-api] error DELETE  - Existe venda(s) para o cliente de ID 13. Não é possivel excluir!!!
+2021-09-30T15:39:09.410Z [livraria-api] error GET  - Cannot set property 'senha' of undefined
+2021-09-30T15:40:04.035Z [livraria-api] error GET  - Cannot set property 'senha' of null
+2021-09-30T15:40:26.104Z [livraria-api] error GET  - Cannot set property 'senha' of null
+2021-09-30T15:42:15.846Z [livraria-api] error GET  - Não existe cliente com o ID 14!
+2021-09-30T15:42:19.631Z [livraria-api] error GET  - Não existe cliente com o ID 13!
+2021-09-30T15:42:50.824Z [livraria-api] error GET  - Não existe cliente com o ID 13!
+2021-09-30T15:43:02.269Z [livraria-api] error GET  - Cannot set property 'senha' of null
+2021-09-30T15:43:33.340Z [livraria-api] error GET  - Cannot set property 'senha' of null
+2021-09-30T15:44:33.887Z [livraria-api] error GET  - Cannot set property 'senha' of null
+2021-09-30T15:44:48.194Z [livraria-api] error GET  - Cannot set property 'senha' of null
+2021-09-30T15:46:03.400Z [livraria-api] error GET  - Não existe cliente com o ID 14!
+2021-09-30T15:46:35.807Z [livraria-api] error GET  - Não existe cliente com o ID 14!
+2021-09-30T15:58:25.346Z [livraria-api] error DELETE  - Missing where or truncate attribute in the options parameter of model.destroy.
+2021-09-30T15:58:56.871Z [livraria-api] error DELETE  - Cannot delete or update a parent row: a foreign key constraint fails (`desafio`.`livros`, CONSTRAINT `livros_ibfk_1` FOREIGN KEY (`autor_id`) REFERENCES `autores` (`autor_id`))
+2021-09-30T16:08:59.753Z [livraria-api] error DELETE  - Cannot delete or update a parent row: a foreign key constraint fails (`desafio`.`livros`, CONSTRAINT `livros_ibfk_1` FOREIGN KEY (`autor_id`) REFERENCES `autores` (`autor_id`))
+2021-09-30T16:11:27.044Z [livraria-api] error DELETE  - Existem livros do autor de ID 4. Não é possivel excluir!!!
+2021-09-30T16:13:26.711Z [livraria-api] error DELETE  - Existem livros do autor de ID 4. Não é possivel excluir!!!
+2021-09-30T16:13:31.814Z [livraria-api] error DELETE  - Existem livros do autor de ID 3. Não é possivel excluir!!!
+2021-09-30T16:13:35.333Z [livraria-api] error DELETE  - Existem livros do autor de ID 2. Não é possivel excluir!!!
+2021-09-30T16:13:38.219Z [livraria-api] error DELETE  - Existem livros do autor de ID 1. Não é possivel excluir!!!
+2021-09-30T16:36:32.202Z [livraria-api] error PUT  - Unexpected string in JSON at position 34
+2021-09-30T16:36:57.575Z [livraria-api] error PUT  - Unexpected string in JSON at position 34
+2021-09-30T16:47:42.337Z [livraria-api] error DELETE  - Existe vendas para o livro de ID 10. Não é possivel excluir!
+2021-09-30T16:48:03.180Z [livraria-api] error DELETE  - Existe vendas para o livro de ID 10. Não é possivel excluir!
+2021-09-30T17:00:23.128Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
+2021-09-30T17:13:19.174Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
+2021-09-30T17:25:29.193Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:25:36.226Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:33:01.519Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:33:05.890Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:34:07.586Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:35:14.650Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:39:03.510Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:39:37.083Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:39:39.544Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:41:51.026Z [livraria-api] error GET  - autor_id is not defined
+2021-09-30T17:42:34.630Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-09-30T17:43:27.118Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:17:30.724Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:17:34.095Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:17:35.180Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:18:54.272Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:21:29.284Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:21:30.125Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:21:30.673Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:23:08.345Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:30:15.470Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:31:09.175Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:31:26.515Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:31:34.865Z [livraria-api] error GET  - Unknown column 'vendas.venda_venda_id' in 'field list'
+2021-10-01T11:31:58.019Z [livraria-api] error GET  - Unknown column 'vendas.venda_venda_id' in 'field list'
+2021-10-01T11:32:51.934Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:35:13.873Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T11:42:45.539Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T12:08:18.376Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
+2021-10-01T12:08:44.538Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-01T12:08:45.622Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
