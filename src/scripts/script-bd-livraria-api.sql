@@ -1,6 +1,6 @@
-create database desafio;
+create database livraria_api;
 
-use desafio;
+use livraria_api;
 
 create table clientes(
 	cliente_id int not null auto_increment primary key,

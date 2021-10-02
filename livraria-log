@@ -91,3 +91,7 @@ notNull Violation: cliente.endereco cannot be null
 2021-10-01T12:08:18.376Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
 2021-10-01T12:08:44.538Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
 2021-10-01T12:08:45.622Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-02T02:37:52.917Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
+2021-10-02T02:38:21.418Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
+2021-10-02T02:38:30.043Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
+2021-10-02T02:38:57.630Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
