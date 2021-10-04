@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
 
-async function connect(){
-    const uri = "mongodb+srv://moisas:d16m09@cluster0.xlo8h.mongodb.net/test"
-    return await mongoose.connect(uri)
+async function conn(){
+    const uri = 'mongodb+srv://moisas:d16m09@cluster0.csnbh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+    return await mongoose.connect(uri )//{ userNewUrlParser: true, userUnifiedTopology: true })
 }
 
-export { connect }
+export { conn }

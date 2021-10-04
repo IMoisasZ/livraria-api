@@ -95,3 +95,38 @@ notNull Violation: cliente.endereco cannot be null
 2021-10-02T02:38:21.418Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
 2021-10-02T02:38:30.043Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
 2021-10-02T02:38:57.630Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
+2021-10-03T13:40:31.456Z [livraria-api] error POST  - bad auth : Authentication failed.
+2021-10-03T20:07:16.590Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:09:52.571Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:22:03.575Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:24:12.013Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:34:06.288Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:34:29.174Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:35:23.942Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:36:51.924Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:40:13.900Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:41:20.185Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:41:30.205Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-03T20:42:03.757Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:42:13.775Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-03T20:42:25.701Z [livraria-api] error POST  - The `uri` parameter to `openUri()` must be a string, got "object". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2021-10-03T20:42:59.592Z [livraria-api] error POST  - The `uri` parameter to `openUri()` must be a string, got "object". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2021-10-03T20:43:19.630Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-03T20:43:45.055Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-03T20:45:55.490Z [livraria-api] error POST  - The `uri` parameter to `openUri()` must be a string, got "object". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2021-10-03T20:46:28.645Z [livraria-api] error POST  - The `uri` parameter to `openUri()` must be a string, got "object". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2021-10-03T20:46:40.027Z [livraria-api] error POST  - Invalid connection string "uri"
+2021-10-03T20:46:51.502Z [livraria-api] error POST  - Invalid connection string "uri"
+2021-10-03T20:47:03.499Z [livraria-api] error POST  - Invalid connection string "uri"
+2021-10-03T20:47:52.125Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:49:16.552Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:49:53.233Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:57:45.903Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:58:27.863Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:58:57.598Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T21:01:30.027Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T21:03:00.553Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-04T02:10:24.904Z [livraria-api] error POST  - Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+2021-10-04T02:10:34.927Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-04T02:43:33.283Z [livraria-api] error PUT  - mongoose is not a function
+2021-10-04T02:45:13.891Z [livraria-api] error PUT  - mongoose is not a function
