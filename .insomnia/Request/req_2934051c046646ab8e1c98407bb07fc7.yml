@@ -1,0 +1,33 @@
+_id: req_2934051c046646ab8e1c98407bb07fc7
+type: Request
+parentId: fld_a817a08d2f0c4693a30f833135559a46
+modified: 1633315808085
+created: 1633267060288
+url: http://localhost:3000/livroInfo
+name: /livroInfo
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"livro_id": 2,
+    	"descricao": "O Senhor dos Aneis",
+    	"paginas": 500,
+    	"editora": "Moisas",
+    	"avaliacoes": []
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_eacaa4d437e84829a05da2d82185b1c9
+authentication: {}
+metaSortKey: -1633267060288
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
