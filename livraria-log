@@ -171,3 +171,7 @@ notNull Violation: cliente.endereco cannot be null
 2021-10-05T02:15:30.319Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
 2021-10-05T02:17:54.870Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
 2021-10-05T02:45:24.886Z [livraria-api] error DELETE  - Cannot read property 'splice' of undefined
+2021-10-05T04:34:41.853Z [livraria-api] error POST  - Cannot read property 'user' of undefined
+2021-10-05T04:34:57.605Z [livraria-api] error POST  - Cannot read property 'user' of undefined
+2021-10-05T04:35:41.786Z [livraria-api] error POST  - Cannot read property 'user' of undefined
+2021-10-05T04:36:02.021Z [livraria-api] error POST  - Cannot read property 'user' of undefined
