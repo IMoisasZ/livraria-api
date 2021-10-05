@@ -130,3 +130,44 @@ notNull Violation: cliente.endereco cannot be null
 2021-10-04T02:10:34.927Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
 2021-10-04T02:43:33.283Z [livraria-api] error PUT  - mongoose is not a function
 2021-10-04T02:45:13.891Z [livraria-api] error PUT  - mongoose is not a function
+2021-10-05T01:44:11.066Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:45:20.597Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:45:57.380Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:46:14.633Z [livraria-api] error POST  - {(intermediate value)}.exec is not a function
+2021-10-05T01:46:39.143Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:46:59.113Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:47:24.085Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:47:58.307Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:48:14.946Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:48:54.927Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:49:20.492Z [livraria-api] error POST  - Cannot read property 'avaliacoes' of null
+2021-10-05T01:50:02.027Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:51:21.170Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:57:31.493Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:00:32.660Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:02:17.343Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:02:51.103Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:04:31.304Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:05:21.867Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:06:06.214Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:06:35.774Z [livraria-api] error GET  - typeOf is not defined
+2021-10-05T02:06:50.242Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:07:36.364Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:08:05.002Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:09:20.692Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:10:02.969Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:10:21.952Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:10:36.402Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:11:06.873Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:11:41.387Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:11:46.232Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:11:58.070Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:12:39.660Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:13:18.259Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:13:35.188Z [livraria-api] error GET  - livro_id.toInt is not a function
+2021-10-05T02:13:52.961Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:14:14.060Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:15:01.987Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:15:30.319Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:17:54.870Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:45:24.886Z [livraria-api] error DELETE  - Cannot read property 'splice' of undefined
