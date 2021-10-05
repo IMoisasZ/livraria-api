@@ -27,8 +27,36 @@ async function deleteLivroInfo(req, res, next){
     }
 }
 
+async function getLivroInfo(req, res, next){
+    try {
+        res.send(await LivroInfoService.getLivroInfo(req.params.livro_id))
+    } catch (err) {
+        next(err)
+    }
+}
+
+async function createAvaliacao(req, res, next){
+    try {
+        const avaliacao = req.body        
+        res.send(await LivroInfoService.createAvaliacao(req.params.livro_id, avaliacao))
+    } catch (err) {
+        next(err)
+    }
+}
+
+async function deleteAvaliacao(req, res, next){
+    try {
+        res.send(await LivroInfoService.deleteAvaliacao(req.params.livro_id, req.params.index))
+    } catch (err) {
+        next(err)
+    }
+}
+
 export default {
     createLivroInfo,
     updateLivroInfo,
-    deleteLivroInfo
+    deleteLivroInfo,
+    getLivroInfo,
+    createAvaliacao,
+    deleteAvaliacao
 }
