@@ -5,6 +5,7 @@ import VendaRoute from './src/routes/venda.route.js'
 import AutorRoute from './src/routes/autor.route.js'
 import LivroRoute from './src/routes/livro.route.js'
 import LivroInfoRoute from './src/routes/livroInfo.route.js'
+import basicAuth from 'express-basic-auth'
 
 const app = express()
 const port = 3000
@@ -28,6 +29,57 @@ global.logger = winston.createLogger({
         myformat
     )
 });
+
+
+// autenticação/autorização
+function getRole(username) {
+
+	// Obs: O perfil de usuário está "hard coded", apenas para facilitar 
+	// o entendimento. O ideal nesse ponto é buscar as informações do usuário 
+	// de um banco de dados, servidor de autorização, etc.
+    if (username == 'admin') {
+        return 'admin'
+    } else{
+        return 'role1'
+    }
+}
+
+function authorize(...allowed) {
+
+    const isAllowed = role => allowed.indexOf(role) > -1;
+
+    return (req, res, next) => {
+
+        if (req.auth.user) {
+            const role = getRole(req.auth.user);
+
+            if (isAllowed(role)) {
+                next()
+            } else {
+                res.status(401).send('Role not allowed');
+            }
+        } else {
+            res.status(403).send('User not found');
+        }
+    }
+}
+
+app.use(basicAuth({
+    authorizer: (username, password) => {
+
+		// Obs: Usuário e senha estão "hard coded", apenas para facilitar 
+		// o entendimento. O ideal nesse ponto é buscar as informações do usuário 
+		// de um banco de dados, servidor de autorização, etc.
+        const userMatches = basicAuth.safeCompare(username, 'admin');
+        const pwdMatches = basicAuth.safeCompare(password, 'admin');
+
+        const user2Matches = basicAuth.safeCompare(username, 'angelo');
+        const pwd2Matches = basicAuth.safeCompare(password, '1234');
+
+        return userMatches && pwdMatches || user2Matches && pwd2Matches;
+    }
+}))
+
 
 
 // rotas
