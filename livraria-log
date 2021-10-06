@@ -91,3 +91,62 @@ notNull Violation: cliente.endereco cannot be null
 2021-10-01T12:08:18.376Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
 2021-10-01T12:08:44.538Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
 2021-10-01T12:08:45.622Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
+2021-10-05T14:57:19.437Z [livraria-api] error GET  - Cannot read property 'user' of undefined
+2021-10-05T15:01:09.045Z [livraria-api] error GET  - auth is not defined
+2021-10-05T15:09:50.916Z [livraria-api] error GET  - auth is not defined
+2021-10-05T15:17:17.227Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:28:07.956Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:28:24.787Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:28:39.529Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:28:52.322Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:29:09.600Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:29:23.588Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:29:32.044Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:29:40.950Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:30:12.380Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:31:43.124Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:33:12.045Z [livraria-api] error GET  - Cannot read property 'username' of undefined
+2021-10-05T15:33:32.315Z [livraria-api] error GET  - username is not defined
+2021-10-05T15:33:41.642Z [livraria-api] error GET  - username is not defined
+2021-10-06T11:02:19.503Z [livraria-api] error GET  - Cannot read property 'user' of undefined
+2021-10-06T11:07:14.961Z [livraria-api] error GET  - json is not defined
+2021-10-06T11:07:24.132Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T11:12:36.107Z [livraria-api] error GET  - auth.then is not a function
+2021-10-06T11:23:09.778Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T11:23:24.601Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T11:24:20.272Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T11:33:07.385Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T11:50:26.792Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:13:34.623Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:13:50.868Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:14:16.519Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:14:32.874Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:15:09.300Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:17:00.606Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:17:23.107Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:21:27.051Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:21:47.427Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:24:42.288Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:24:54.787Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:25:19.708Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:25:52.119Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:28:28.502Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:28:54.924Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T12:47:12.350Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
+2021-10-06T13:37:48.094Z [livraria-api] error GET  - Não existe cliente com o ID 14!
+2021-10-06T15:07:07.847Z [livraria-api] error PUT  - O cliente undefined difere mopri08@gmail.com
+2021-10-06T15:07:52.701Z [livraria-api] error PUT  - O cliente mopri08@gmail.co difere mopri08@gmail.com
+2021-10-06T15:09:13.866Z [livraria-api] error PUT  - O cliente mopri08@gmail.com difere admin
+2021-10-06T15:10:12.366Z [livraria-api] error PUT  - Você não tem acesso para alterar os dados desse cliente!
+2021-10-06T15:15:10.018Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
+2021-10-06T15:19:08.235Z [livraria-api] error POST  - ID do cliente inválido!
+2021-10-06T15:26:00.205Z [livraria-api] error POST  - O ID do cliente é obrigatório!
+2021-10-06T15:26:08.927Z [livraria-api] error POST  - O ID do cliente é obrigatório!
+2021-10-06T15:26:26.632Z [livraria-api] error POST  - notNull Violation: venda.cliente_id cannot be null
+2021-10-06T15:28:51.093Z [livraria-api] error POST  - notNull Violation: venda.cliente_id cannot be null
+2021-10-06T15:29:09.813Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
+2021-10-06T15:45:50.124Z [livraria-api] error GET  - WHERE parameter "cliente_id" has invalid "undefined" value
+2021-10-06T15:47:07.337Z [livraria-api] error GET  - WHERE parameter "cliente_id" has invalid "undefined" value
+2021-10-06T15:47:28.939Z [livraria-api] error GET  - WHERE parameter "cliente_id" has invalid "undefined" value
+2021-10-06T15:48:16.719Z [livraria-api] error GET  - WHERE parameter "cliente_id" has invalid "undefined" value
+2021-10-06T15:54:35.913Z [livraria-api] error GET  - Denied

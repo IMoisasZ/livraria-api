@@ -28,13 +28,11 @@ global.logger = winston.createLogger({
     )
 });
 
-
 // rotas
 app.use('/cliente', ClienteRoute)
 app.use('/venda', VendaRoute)
 app.use('/autor', AutorRoute)
 app.use('/livro', LivroRoute)
-
 
 app.listen(port, ()=>{
     console.log(`MODULO DESAFIO RODANDO NA PORTA ${port}`);
@@ -46,3 +44,4 @@ app.use((err, req, res, next) => {
     logger.error(`${req.method} ${req.baseUrl} - ${err.message}`)
     res.status(400).send({ erros: err.message })
 })
+
