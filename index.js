@@ -4,6 +4,7 @@ import ClienteRoute from './src/routes/cliente.route.js'
 import VendaRoute from './src/routes/venda.route.js'
 import AutorRoute from './src/routes/autor.route.js'
 import LivroRoute from './src/routes/livro.route.js'
+import LivroInfoRoute from './src/routes/livroInfo.route.js'
 
 const app = express()
 const port = 3000
@@ -33,6 +34,7 @@ app.use('/cliente', ClienteRoute)
 app.use('/venda', VendaRoute)
 app.use('/autor', AutorRoute)
 app.use('/livro', LivroRoute)
+app.use('/livroInfo', LivroInfoRoute)
 
 app.listen(port, ()=>{
     console.log(`MODULO DESAFIO RODANDO NA PORTA ${port}`);

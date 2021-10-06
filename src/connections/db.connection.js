@@ -1,6 +1,6 @@
 import Sequelize from 'sequelize';
 
-const sequelize = new Sequelize("desafio","root","",
+const sequelize = new Sequelize("livraria_api","root","",
     {
         dialect: "mysql",
         define: {

@@ -91,62 +91,87 @@ notNull Violation: cliente.endereco cannot be null
 2021-10-01T12:08:18.376Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
 2021-10-01T12:08:44.538Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
 2021-10-01T12:08:45.622Z [livraria-api] error GET  - Include unexpected. Element has to be either a Model, an Association or an object.
-2021-10-05T14:57:19.437Z [livraria-api] error GET  - Cannot read property 'user' of undefined
-2021-10-05T15:01:09.045Z [livraria-api] error GET  - auth is not defined
-2021-10-05T15:09:50.916Z [livraria-api] error GET  - auth is not defined
-2021-10-05T15:17:17.227Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:28:07.956Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:28:24.787Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:28:39.529Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:28:52.322Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:29:09.600Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:29:23.588Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:29:32.044Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:29:40.950Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:30:12.380Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:31:43.124Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:33:12.045Z [livraria-api] error GET  - Cannot read property 'username' of undefined
-2021-10-05T15:33:32.315Z [livraria-api] error GET  - username is not defined
-2021-10-05T15:33:41.642Z [livraria-api] error GET  - username is not defined
-2021-10-06T11:02:19.503Z [livraria-api] error GET  - Cannot read property 'user' of undefined
-2021-10-06T11:07:14.961Z [livraria-api] error GET  - json is not defined
-2021-10-06T11:07:24.132Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T11:12:36.107Z [livraria-api] error GET  - auth.then is not a function
-2021-10-06T11:23:09.778Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T11:23:24.601Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T11:24:20.272Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T11:33:07.385Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T11:50:26.792Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:13:34.623Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:13:50.868Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:14:16.519Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:14:32.874Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:15:09.300Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:17:00.606Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:17:23.107Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:21:27.051Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:21:47.427Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:24:42.288Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:24:54.787Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:25:19.708Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:25:52.119Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:28:28.502Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:28:54.924Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T12:47:12.350Z [livraria-api] error GET  - Cannot set headers after they are sent to the client
-2021-10-06T13:37:48.094Z [livraria-api] error GET  - Não existe cliente com o ID 14!
-2021-10-06T15:07:07.847Z [livraria-api] error PUT  - O cliente undefined difere mopri08@gmail.com
-2021-10-06T15:07:52.701Z [livraria-api] error PUT  - O cliente mopri08@gmail.co difere mopri08@gmail.com
-2021-10-06T15:09:13.866Z [livraria-api] error PUT  - O cliente mopri08@gmail.com difere admin
-2021-10-06T15:10:12.366Z [livraria-api] error PUT  - Você não tem acesso para alterar os dados desse cliente!
-2021-10-06T15:15:10.018Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
-2021-10-06T15:19:08.235Z [livraria-api] error POST  - ID do cliente inválido!
-2021-10-06T15:26:00.205Z [livraria-api] error POST  - O ID do cliente é obrigatório!
-2021-10-06T15:26:08.927Z [livraria-api] error POST  - O ID do cliente é obrigatório!
-2021-10-06T15:26:26.632Z [livraria-api] error POST  - notNull Violation: venda.cliente_id cannot be null
-2021-10-06T15:28:51.093Z [livraria-api] error POST  - notNull Violation: venda.cliente_id cannot be null
-2021-10-06T15:29:09.813Z [livraria-api] error POST  - Não há estoque disposivel para o livro de ID 10!
-2021-10-06T15:45:50.124Z [livraria-api] error GET  - WHERE parameter "cliente_id" has invalid "undefined" value
-2021-10-06T15:47:07.337Z [livraria-api] error GET  - WHERE parameter "cliente_id" has invalid "undefined" value
-2021-10-06T15:47:28.939Z [livraria-api] error GET  - WHERE parameter "cliente_id" has invalid "undefined" value
-2021-10-06T15:48:16.719Z [livraria-api] error GET  - WHERE parameter "cliente_id" has invalid "undefined" value
-2021-10-06T15:54:35.913Z [livraria-api] error GET  - Denied
+2021-10-02T02:37:52.917Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
+2021-10-02T02:38:21.418Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
+2021-10-02T02:38:30.043Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
+2021-10-02T02:38:57.630Z [livraria-api] error GET  - connect ECONNREFUSED 127.0.0.1:3306
+2021-10-03T13:40:31.456Z [livraria-api] error POST  - bad auth : Authentication failed.
+2021-10-03T20:07:16.590Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:09:52.571Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:22:03.575Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:24:12.013Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:34:06.288Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:34:29.174Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:35:23.942Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:36:51.924Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:40:13.900Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:41:20.185Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:41:30.205Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-03T20:42:03.757Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:42:13.775Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-03T20:42:25.701Z [livraria-api] error POST  - The `uri` parameter to `openUri()` must be a string, got "object". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2021-10-03T20:42:59.592Z [livraria-api] error POST  - The `uri` parameter to `openUri()` must be a string, got "object". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2021-10-03T20:43:19.630Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-03T20:43:45.055Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-03T20:45:55.490Z [livraria-api] error POST  - The `uri` parameter to `openUri()` must be a string, got "object". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2021-10-03T20:46:28.645Z [livraria-api] error POST  - The `uri` parameter to `openUri()` must be a string, got "object". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2021-10-03T20:46:40.027Z [livraria-api] error POST  - Invalid connection string "uri"
+2021-10-03T20:46:51.502Z [livraria-api] error POST  - Invalid connection string "uri"
+2021-10-03T20:47:03.499Z [livraria-api] error POST  - Invalid connection string "uri"
+2021-10-03T20:47:52.125Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:49:16.552Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:49:53.233Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T20:57:45.903Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:58:27.863Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T20:58:57.598Z [livraria-api] error POST  - Cannot read property 'model' of undefined
+2021-10-03T21:01:30.027Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-03T21:03:00.553Z [livraria-api] error POST  - connect ECONNREFUSED 127.0.0.1:27017
+2021-10-04T02:10:24.904Z [livraria-api] error POST  - Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+2021-10-04T02:10:34.927Z [livraria-api] error POST  - Operation `livroInfo.insertOne()` buffering timed out after 10000ms
+2021-10-04T02:43:33.283Z [livraria-api] error PUT  - mongoose is not a function
+2021-10-04T02:45:13.891Z [livraria-api] error PUT  - mongoose is not a function
+2021-10-05T01:44:11.066Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:45:20.597Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:45:57.380Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:46:14.633Z [livraria-api] error POST  - {(intermediate value)}.exec is not a function
+2021-10-05T01:46:39.143Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:46:59.113Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:47:24.085Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:47:58.307Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:48:14.946Z [livraria-api] error POST  - Cannot read property 'push' of undefined
+2021-10-05T01:48:54.927Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:49:20.492Z [livraria-api] error POST  - Cannot read property 'avaliacoes' of null
+2021-10-05T01:50:02.027Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:51:21.170Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '1' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T01:57:31.493Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:00:32.660Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:02:17.343Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:02:51.103Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:04:31.304Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:05:21.867Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:06:06.214Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:06:35.774Z [livraria-api] error GET  - typeOf is not defined
+2021-10-05T02:06:50.242Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:07:36.364Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:08:05.002Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:09:20.692Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:10:02.969Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:10:21.952Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:10:36.402Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:11:06.873Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:11:41.387Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:11:46.232Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:11:58.070Z [livraria-api] error GET  - Cast to Number failed for value "NaN" (type number) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:12:39.660Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:13:18.259Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:13:35.188Z [livraria-api] error GET  - livro_id.toInt is not a function
+2021-10-05T02:13:52.961Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:14:14.060Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:15:01.987Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:15:30.319Z [livraria-api] error GET  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:17:54.870Z [livraria-api] error POST  - Cast to Number failed for value "{ livro_id: '2' }" (type Object) at path "livro_id" for model "LivroInfo"
+2021-10-05T02:45:24.886Z [livraria-api] error DELETE  - Cannot read property 'splice' of undefined
+2021-10-05T04:34:41.853Z [livraria-api] error POST  - Cannot read property 'user' of undefined
+2021-10-05T04:34:57.605Z [livraria-api] error POST  - Cannot read property 'user' of undefined
+2021-10-05T04:35:41.786Z [livraria-api] error POST  - Cannot read property 'user' of undefined
+2021-10-05T04:36:02.021Z [livraria-api] error POST  - Cannot read property 'user' of undefined
