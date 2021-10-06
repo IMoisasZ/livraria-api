@@ -1,11 +1,15 @@
 import ClienteRepository from '../repositories/cliente.repository.js'
 import VendaRepository from '../repositories/venda.repository.js'
 
+
 async function createCliente(cliente){
     return await ClienteRepository.createCliente(cliente)
 }
 
-async function updateCliente(cliente){
+async function updateCliente(cliente,clienteLogado){
+    if(cliente.email !== clienteLogado){
+        throw new Error(`Você não tem acesso para alterar os dados desse cliente!`)
+    }
     return await ClienteRepository.updateCliente(cliente)
 }
 
