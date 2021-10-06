@@ -16,6 +16,7 @@
   "type": "module",
   "dependencies": {
     "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5",
     "winston": "^3.3.3"
