@@ -1,4 +1,5 @@
 import ClienteService from '../services/cliente.service.js'
+import basicAuth from 'basic-auth'
 
 async function createCliente(req, res, next){
     try {
@@ -11,8 +12,10 @@ async function createCliente(req, res, next){
 
 async function updateCliente(req, res, next){
     try {
+        let clienteLogado = basicAuth(req)
+
         let cliente = req.body
-        res. send(await ClienteService.updateCliente(cliente))
+        res.send(await ClienteService.updateCliente(cliente, clienteLogado.name))
     } catch (err) {
         next(err)
     }

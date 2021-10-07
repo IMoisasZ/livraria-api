@@ -63,8 +63,13 @@ async function getCliente(cliente_id){
 
 async function getClienteByEmail(email){
     try {
+<<<<<<< HEAD
         return await ClienteModulo.findOne({
             where:{
+=======
+        return  await ClienteModulo.findOne({
+            where: {
+>>>>>>> 005ec20c1dc0d4ca15d3ae4d7378b945b4ee4ee3
                 email
             }
         })

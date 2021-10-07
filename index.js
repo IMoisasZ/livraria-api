@@ -5,8 +5,11 @@ import VendaRoute from './src/routes/venda.route.js'
 import AutorRoute from './src/routes/autor.route.js'
 import LivroRoute from './src/routes/livro.route.js'
 import LivroInfoRoute from './src/routes/livroInfo.route.js'
+<<<<<<< HEAD
 import basicAuth from 'express-basic-auth'
 import ClienteRepository from './src/repositories/cliente.repository.js'
+=======
+>>>>>>> 005ec20c1dc0d4ca15d3ae4d7378b945b4ee4ee3
 
 const app = express()
 const port = 3000
@@ -31,6 +34,7 @@ global.logger = winston.createLogger({
     )
 });
 
+<<<<<<< HEAD
 
 // autenticação/autorização
 function getRole(username) {
@@ -86,6 +90,8 @@ app.use(basicAuth({
 }))
 
 
+=======
+>>>>>>> 005ec20c1dc0d4ca15d3ae4d7378b945b4ee4ee3
 // rotas
 app.use('/cliente',authorize(
     app.use(basicAuth({
@@ -144,4 +150,7 @@ app.use((err, req, res, next) => {
     res.status(400).send({ erros: err.message })
 })
 
+<<<<<<< HEAD
 // export default authorize
+=======
+>>>>>>> 005ec20c1dc0d4ca15d3ae4d7378b945b4ee4ee3
