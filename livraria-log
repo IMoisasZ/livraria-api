@@ -175,3 +175,13 @@ notNull Violation: cliente.endereco cannot be null
 2021-10-05T04:34:57.605Z [livraria-api] error POST  - Cannot read property 'user' of undefined
 2021-10-05T04:35:41.786Z [livraria-api] error POST  - Cannot read property 'user' of undefined
 2021-10-05T04:36:02.021Z [livraria-api] error POST  - Cannot read property 'user' of undefined
+2021-10-06T02:33:03.427Z [livraria-api] error GET  - The "string" argument must be of type string or an instance of Buffer or ArrayBuffer. Received undefined
+2021-10-06T02:34:09.871Z [livraria-api] error GET  - The "string" argument must be of type string or an instance of Buffer or ArrayBuffer. Received undefined
+2021-10-06T04:13:03.088Z [livraria-api] error GET  - Cannot read property 'name' of undefined
+2021-10-06T04:19:54.352Z [livraria-api] error GET  - Cannot read property 'challenge' of undefined
+2021-10-06T04:20:41.551Z [livraria-api] error GET  - Cannot read property 'name' of undefined
+2021-10-06T04:20:57.436Z [livraria-api] error GET  - Cannot read property 'username' of undefined
+2021-10-06T04:21:02.580Z [livraria-api] error GET  - Cannot read property 'user' of undefined
+2021-10-06T04:21:23.706Z [livraria-api] error GET  - cliente is not defined
+2021-10-06T04:49:51.476Z [livraria-api] error GET  - role is not defined
+2021-10-06T04:52:46.446Z [livraria-api] error GET  - role is not defined

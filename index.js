@@ -6,6 +6,7 @@ import AutorRoute from './src/routes/autor.route.js'
 import LivroRoute from './src/routes/livro.route.js'
 import LivroInfoRoute from './src/routes/livroInfo.route.js'
 import basicAuth from 'express-basic-auth'
+import ClienteRepository from './src/repositories/cliente.repository.js'
 
 const app = express()
 const port = 3000
@@ -39,7 +40,7 @@ function getRole(username) {
 	// de um banco de dados, servidor de autorização, etc.
     if (username == 'admin') {
         return 'admin'
-    } else{
+    } else {
         return 'role1'
     }
 }
@@ -51,6 +52,7 @@ function authorize(...allowed) {
     return (req, res, next) => {
 
         if (req.auth.user) {
+
             const role = getRole(req.auth.user);
 
             if (isAllowed(role)) {
@@ -65,27 +67,69 @@ function authorize(...allowed) {
 }
 
 app.use(basicAuth({
-    authorizer: (username, password) => {
-
+    authorizer: async (username, password) => {
 		// Obs: Usuário e senha estão "hard coded", apenas para facilitar 
 		// o entendimento. O ideal nesse ponto é buscar as informações do usuário 
 		// de um banco de dados, servidor de autorização, etc.
-        const userMatches = basicAuth.safeCompare(username, 'admin');
-        const pwdMatches = basicAuth.safeCompare(password, 'admin');
+        if(username === 'adim'){
+            const userMatches = basicAuth.safeCompare(username, 'admin');
+            const pwdMatches = basicAuth.safeCompare(password, 'admin');
+            return userMatches && pwdMatches
+        }
 
-        const user2Matches = basicAuth.safeCompare(username, 'angelo');
-        const pwd2Matches = basicAuth.safeCompare(password, '1234');
+        let cliente = await ClienteRepository.getClienteByEmail(username)
+        const user2Matches = basicAuth.safeCompare(username, cliente.email );
+        const pwd2Matches = basicAuth.safeCompare(password, cliente.senha);
 
-        return userMatches && pwdMatches || user2Matches && pwd2Matches;
+        return user2Matches && pwd2Matches;
     }
 }))
 
 
-
 // rotas
-app.use('/cliente', ClienteRoute)
+app.use('/cliente',authorize(
+    app.use(basicAuth({
+        authorizer: async (username, password) => {
+            // Obs: Usuário e senha estão "hard coded", apenas para facilitar 
+            // o entendimento. O ideal nesse ponto é buscar as informações do usuário 
+            // de um banco de dados, servidor de autorização, etc.
+            if(username === 'adim'){
+                const userMatches = basicAuth.safeCompare(username, 'admin');
+                const pwdMatches = basicAuth.safeCompare(password, 'admin');
+                return userMatches && pwdMatches
+            }
+    
+            let cliente = await ClienteRepository.getClienteByEmail(username)
+            const user2Matches = basicAuth.safeCompare(username, cliente.email );
+            const pwd2Matches = basicAuth.safeCompare(password, cliente.senha);
+    
+            return user2Matches && pwd2Matches;
+        }
+    }))
+    
+), ClienteRoute)
 app.use('/venda', VendaRoute)
-app.use('/autor', AutorRoute)
+app.use('/autor', authorize(
+    app.use(basicAuth({
+        authorizer: async (username, password) => {
+            // Obs: Usuário e senha estão "hard coded", apenas para facilitar 
+            // o entendimento. O ideal nesse ponto é buscar as informações do usuário 
+            // de um banco de dados, servidor de autorização, etc.
+            if(username === 'adim'){
+                const userMatches = basicAuth.safeCompare(username, 'admin');
+                const pwdMatches = basicAuth.safeCompare(password, 'admin');
+                return userMatches && pwdMatches
+            }
+    
+            let cliente = await ClienteRepository.getClienteByEmail(username)
+            const user2Matches = basicAuth.safeCompare(username, cliente.email );
+            const pwd2Matches = basicAuth.safeCompare(password, cliente.senha);
+    
+            return user2Matches && pwd2Matches;
+        }
+    }))
+    
+),AutorRoute)
 app.use('/livro', LivroRoute)
 app.use('/livroInfo', LivroInfoRoute)
 
@@ -99,3 +143,5 @@ app.use((err, req, res, next) => {
     logger.error(`${req.method} ${req.baseUrl} - ${err.message}`)
     res.status(400).send({ erros: err.message })
 })
+
+// export default authorize

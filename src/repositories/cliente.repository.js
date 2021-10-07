@@ -61,10 +61,23 @@ async function getCliente(cliente_id){
     }
 }
 
+async function getClienteByEmail(email){
+    try {
+        return await ClienteModulo.findOne({
+            where:{
+                email
+            }
+        })
+    } catch (err) {
+        throw err
+    }
+}
+
 export default {
     createCliente,
     updateCliente,
     deleteCliente,
     getClientes,
-    getCliente
+    getCliente,
+    getClienteByEmail
 }
