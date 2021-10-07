@@ -30,49 +30,9 @@ global.logger = winston.createLogger({
 });
 
 // rotas
-app.use('/cliente',authorize(
-    app.use(basicAuth({
-        authorizer: async (username, password) => {
-            // Obs: Usuário e senha estão "hard coded", apenas para facilitar 
-            // o entendimento. O ideal nesse ponto é buscar as informações do usuário 
-            // de um banco de dados, servidor de autorização, etc.
-            if(username === 'adim'){
-                const userMatches = basicAuth.safeCompare(username, 'admin');
-                const pwdMatches = basicAuth.safeCompare(password, 'admin');
-                return userMatches && pwdMatches
-            }
-    
-            let cliente = await ClienteRepository.getClienteByEmail(username)
-            const user2Matches = basicAuth.safeCompare(username, cliente.email );
-            const pwd2Matches = basicAuth.safeCompare(password, cliente.senha);
-    
-            return user2Matches && pwd2Matches;
-        }
-    }))
-    
-), ClienteRoute)
+app.use('/cliente', ClienteRoute)
 app.use('/venda', VendaRoute)
-app.use('/autor', authorize(
-    app.use(basicAuth({
-        authorizer: async (username, password) => {
-            // Obs: Usuário e senha estão "hard coded", apenas para facilitar 
-            // o entendimento. O ideal nesse ponto é buscar as informações do usuário 
-            // de um banco de dados, servidor de autorização, etc.
-            if(username === 'adim'){
-                const userMatches = basicAuth.safeCompare(username, 'admin');
-                const pwdMatches = basicAuth.safeCompare(password, 'admin');
-                return userMatches && pwdMatches
-            }
-    
-            let cliente = await ClienteRepository.getClienteByEmail(username)
-            const user2Matches = basicAuth.safeCompare(username, cliente.email );
-            const pwd2Matches = basicAuth.safeCompare(password, cliente.senha);
-    
-            return user2Matches && pwd2Matches;
-        }
-    }))
-    
-),AutorRoute)
+app.use('/autor', AutorRoute)
 app.use('/livro', LivroRoute)
 app.use('/livroInfo', LivroInfoRoute)
 
