@@ -47,3 +47,5 @@ app.use((err, req, res, next) => {
     res.status(400).send({ erros: err.message })
 })
 
+export default app
+
