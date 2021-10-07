@@ -5,11 +5,6 @@ import VendaRoute from './src/routes/venda.route.js'
 import AutorRoute from './src/routes/autor.route.js'
 import LivroRoute from './src/routes/livro.route.js'
 import LivroInfoRoute from './src/routes/livroInfo.route.js'
-<<<<<<< HEAD
-import basicAuth from 'express-basic-auth'
-import ClienteRepository from './src/repositories/cliente.repository.js'
-=======
->>>>>>> 005ec20c1dc0d4ca15d3ae4d7378b945b4ee4ee3
 
 const app = express()
 const port = 3000
@@ -34,64 +29,6 @@ global.logger = winston.createLogger({
     )
 });
 
-<<<<<<< HEAD
-
-// autenticação/autorização
-function getRole(username) {
-
-	// Obs: O perfil de usuário está "hard coded", apenas para facilitar 
-	// o entendimento. O ideal nesse ponto é buscar as informações do usuário 
-	// de um banco de dados, servidor de autorização, etc.
-    if (username == 'admin') {
-        return 'admin'
-    } else {
-        return 'role1'
-    }
-}
-
-function authorize(...allowed) {
-
-    const isAllowed = role => allowed.indexOf(role) > -1;
-
-    return (req, res, next) => {
-
-        if (req.auth.user) {
-
-            const role = getRole(req.auth.user);
-
-            if (isAllowed(role)) {
-                next()
-            } else {
-                res.status(401).send('Role not allowed');
-            }
-        } else {
-            res.status(403).send('User not found');
-        }
-    }
-}
-
-app.use(basicAuth({
-    authorizer: async (username, password) => {
-		// Obs: Usuário e senha estão "hard coded", apenas para facilitar 
-		// o entendimento. O ideal nesse ponto é buscar as informações do usuário 
-		// de um banco de dados, servidor de autorização, etc.
-        if(username === 'adim'){
-            const userMatches = basicAuth.safeCompare(username, 'admin');
-            const pwdMatches = basicAuth.safeCompare(password, 'admin');
-            return userMatches && pwdMatches
-        }
-
-        let cliente = await ClienteRepository.getClienteByEmail(username)
-        const user2Matches = basicAuth.safeCompare(username, cliente.email );
-        const pwd2Matches = basicAuth.safeCompare(password, cliente.senha);
-
-        return user2Matches && pwd2Matches;
-    }
-}))
-
-
-=======
->>>>>>> 005ec20c1dc0d4ca15d3ae4d7378b945b4ee4ee3
 // rotas
 app.use('/cliente',authorize(
     app.use(basicAuth({
@@ -150,7 +87,3 @@ app.use((err, req, res, next) => {
     res.status(400).send({ erros: err.message })
 })
 
-<<<<<<< HEAD
-// export default authorize
-=======
->>>>>>> 005ec20c1dc0d4ca15d3ae4d7378b945b4ee4ee3
