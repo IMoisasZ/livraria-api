@@ -1,5 +1,0 @@
-{
-  "presets": [
-      "stage-1", "latest", "jest"
-  ]
-}

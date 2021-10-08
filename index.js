@@ -7,7 +7,6 @@ import LivroRoute from './src/routes/livro.route.js'
 import LivroInfoRoute from './src/routes/livroInfo.route.js'
 
 const app = express()
-const port = 3000
 
 app.use(express.json())
 
@@ -35,11 +34,6 @@ app.use('/venda', VendaRoute)
 app.use('/autor', AutorRoute)
 app.use('/livro', LivroRoute)
 app.use('/livroInfo', LivroInfoRoute)
-
-app.listen(port, ()=>{
-    console.log(`MODULO DESAFIO RODANDO NA PORTA ${port}`);
-})
-
 
 // erro padrão
 app.use((err, req, res, next) => {

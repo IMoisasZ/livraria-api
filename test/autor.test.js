@@ -9,17 +9,10 @@ describe('Testes de autor', ()=>{
             telefone: '12345678'
         }
         
-       const res = await request(app)
-      .post('/autor')
-      .send(autor)
-        
-      expect(res.status).toBe(201)
-
-      const autorCadastrado = await request(app)
-      .get('/autor/:autor_id')
-      .send(res.autor_id)
-        console.log(res);
-      expect(autorCadastrado.email).toBe(autor.email)
+      const result =  await request(app)
+      .get('/autor')
+      .send({})
+      expect(!result).toBe(false)
 
     })
 })
