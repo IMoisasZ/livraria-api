@@ -24,12 +24,8 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
-=======
     "babel-jest": "^27.2.4",
     "babel-preset-env": "^1.7.0",
->>>>>>> 7074e3e33eb5d39843c10e3b0482555ab5cda490
     "jest": "^27.2.4",
     "supertest": "^6.1.6"
   }
