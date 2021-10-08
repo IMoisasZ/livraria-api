@@ -1,5 +1,5 @@
-import app from './index.js'
-const PORT = 3000
-app.listen(PORT, ()=>{
-    console.log(`MODULO DESAFIO RODANDO NA PORTA ${PORT}`);
+import app from './app.js'
+
+app.listen(3000, () =>{
+    console.log('MODULO DESAFIO RODANDO NA PORTA 3000');
 })

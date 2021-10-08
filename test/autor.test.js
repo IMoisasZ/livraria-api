@@ -1,6 +1,6 @@
-import request from 'supertest'
-import app from '../index.js'
+import supertest from 'supertest';
 
+<<<<<<< HEAD
 describe('Testes de autor', ()=>{
     test.only('Criar um autor com dados de teste.', async ()=>{
         const autor = {
@@ -16,3 +16,10 @@ describe('Testes de autor', ()=>{
 
     })
 })
+=======
+const request = supertest('http://localhost:3000')
+    test('Criar um autor com dados de teste.', async ()=>{        
+       const resposta = await request.get('/autor').auth('admin','desafio-igti-nodejs')
+      expect(resposta.status).toBe(200)
+    })
+>>>>>>> 7074e3e33eb5d39843c10e3b0482555ab5cda490
