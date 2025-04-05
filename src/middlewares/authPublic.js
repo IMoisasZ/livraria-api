@@ -1,33 +1,44 @@
 import basicAuth from 'basic-auth'
 import ClienteRepository from '../repositories/cliente.repository.js'
+import { decrypt } from '../utils/encrypt_decrypt.utils.js'
+import dotenv from 'dotenv'
+dotenv.config()
 
+const { ADMIN, PASSWORD_AUTH_PRIVATE } = process.env
 
-const authPublic = async function (req, res, next){
-    const user = basicAuth(req)
-    if(user.name === 'admin'){
-        if(user.pass === 'desafio-igti-nodejs'){
-            next()
-        }else{
-            res.statusCode = 401
-            res.end('Denied')
-        }
-    }else{
-        const cliente = await ClienteRepository.getClienteByEmail(user.name)
-        if(cliente){
-            const username = cliente.email
-            const password = cliente.senha
-    
-            if(user && user.name.toLowerCase() === username.toLowerCase() && user.pass === password){
-                next()
-            }else{
-                res.statusCode = 401
-                res.end('Denied')
-            }
-        }else{
-            res.statusCode = 401
-            res.end('Denied')
-        }
-    }
-    
+const authPublic = async function (req, res, next) {
+	const user = basicAuth(req)
+
+	if (!user) {
+		return res.status(401).json({ error: `Dados do usuário não informado!` })
+	}
+
+	const cliente = await ClienteRepository.getClienteByEmail(user.name)
+
+	if (!cliente) {
+		return res.status(401).json({ error: `Usuário incorreto ou não existe!` })
+	}
+
+	if (user.name === ADMIN) {
+		if (user.pass === PASSWORD_AUTH_PRIVATE) {
+			next()
+		} else {
+			return res.status(401).json({ error: 'Denied' })
+		}
+	}
+
+	if (!user.pass) {
+		return res.status(401).json({ error: 'Senha não informada!' })
+	}
+
+	const password = cliente.senha
+
+	const match = await decrypt(user.pass, password)
+
+	if (!match) {
+		return res.status(401).json({ error: 'Senha incorreta!' })
+	}
+
+	next()
 }
 export default authPublic

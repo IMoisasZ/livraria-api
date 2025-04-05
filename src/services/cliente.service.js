@@ -1,47 +1,64 @@
 import ClienteRepository from '../repositories/cliente.repository.js'
 import VendaRepository from '../repositories/venda.repository.js'
+import { encrypt } from '../utils/encrypt_decrypt.utils.js'
 
-
-async function createCliente(cliente){
-    return await ClienteRepository.createCliente(cliente)
+async function createCliente(cliente) {
+	try {
+		cliente.senha = encrypt(cliente.senha)
+		return await ClienteRepository.createCliente(cliente)
+	} catch (error) {
+		throw error
+	}
 }
 
-async function updateCliente(cliente,clienteLogado){
-    if(cliente.email !== clienteLogado){
-        throw new Error(`Você não tem acesso para alterar os dados desse cliente!`)
-    }
-    return await ClienteRepository.updateCliente(cliente)
+async function updateCliente(cliente) {
+	try {
+		delete cliente.senha
+		return await ClienteRepository.updateCliente(cliente)
+	} catch (error) {
+		throw error
+	}
 }
 
-async function deleteCliente(cliente_id){
-    try {
-        let vendas = await VendaRepository.getVendaByClienteId(cliente_id)
-        if(vendas.length){
-            throw new Error(`Existe venda(s) para o cliente de ID ${cliente_id}. Não é possivel excluir!!!`)
-        }    
-        return await ClienteRepository.deleteCliente(cliente_id)
-    } catch (err) {
-        throw err
-    }
+async function deleteCliente(id) {
+	try {
+		let vendas = await VendaRepository.getVendaByClienteId(id)
+		const { nome } = await ClienteRepository.getCliente(id)
+		if (vendas.length) {
+			throw new Error(
+				`Existe venda(s) para o cliente ${nome.toUpperCase()}. Não é possivel excluir!!!`
+			)
+		}
+		return await ClienteRepository.deleteCliente(id)
+	} catch (error) {
+		throw error
+	}
 }
 
-async function getClientes(){
-    return await ClienteRepository.getClientes()
+async function getClientes() {
+	try {
+		return await ClienteRepository.getClientes()
+	} catch (error) {
+		throw error
+	}
 }
 
-async function getCliente(cliente_id){
-    let cliente = await ClienteRepository.getCliente(cliente_id)
-    if(!cliente){
-        throw new Error(`Não existe cliente com o ID ${cliente_id}!`)
-    }
-    return await ClienteRepository.getCliente(cliente_id)
+async function getCliente(id) {
+	try {
+		let cliente = await ClienteRepository.getCliente(id)
+		if (!cliente) {
+			throw new Error(`Não existe cliente com o ID ${id}!`)
+		}
+		return await ClienteRepository.getCliente(id)
+	} catch (error) {
+		throw error
+	}
 }
-
 
 export default {
-    createCliente,
-    updateCliente,
-    deleteCliente,
-    getClientes,
-    getCliente
+	createCliente,
+	updateCliente,
+	deleteCliente,
+	getClientes,
+	getCliente,
 }

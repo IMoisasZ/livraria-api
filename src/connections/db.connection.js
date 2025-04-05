@@ -1,12 +1,15 @@
-import Sequelize from 'sequelize';
+import Sequelize from 'sequelize'
+import dotenv from 'dotenv'
+dotenv.config()
 
-const sequelize = new Sequelize("livraria_api","root","",
-    {
-        dialect: "mysql",
-        define: {
-            timestamps: false
-        }
-    }
-)
+const { DATABASE, HOST, USER, PASSWORD, DIALECT } = process.env
 
-export default sequelize;
+const dbConnection = new Sequelize(DATABASE, USER, PASSWORD, {
+	host: HOST,
+	dialect: DIALECT,
+	define: {
+		timestamps: true,
+	},
+})
+
+export default dbConnection

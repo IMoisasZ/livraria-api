@@ -1,83 +1,92 @@
-import ClienteModulo from '../modules/cliente.modulo.js'
+import { Cliente } from '../modules/index.js'
 
-async function createCliente(cliente){
-    try {
-        let createCli = await ClienteModulo.create(cliente)
-        return await getCliente(createCli.cliente_id)
-    } catch (err) {
-        throw err
-    }
+async function createCliente(cliente) {
+	try {
+		const { id } = await Cliente.create(cliente)
+		return await getCliente(id)
+	} catch (err) {
+		throw err
+	}
 }
 
-async function updateCliente(cliente){
-    try {
-        await ClienteModulo.update(cliente, {
-            where: {
-                cliente_id: cliente.cliente_id
-            }
-        })
-        return await getCliente(cliente.cliente_id)
-    } catch (err) {
-        throw err
-    }
+async function updateCliente(cliente) {
+	try {
+		await Cliente.update(cliente, {
+			where: {
+				id: cliente.id,
+			},
+		})
+		return await getCliente(cliente.id)
+	} catch (err) {
+		throw err
+	}
 }
 
-async function deleteCliente(cliente_id){
-    try {
-        await ClienteModulo.destroy({
-            where:{
-                cliente_id
-            }
-        })
-    } catch (err) {
-        throw err
-    }
+async function deleteCliente(id) {
+	try {
+		await Cliente.destroy({
+			where: {
+				id,
+			},
+		})
+	} catch (err) {
+		throw err
+	}
 }
 
-async function getClientes(){
-    try {
-        let cli = await ClienteModulo.findAll()
-        for(let i = 0; i< cli.length; i++){
-            cli[i].senha = undefined
-        }
-        return cli
-    } catch (err) {
-        throw err
-    }
+async function getClientes() {
+	try {
+		return await Cliente.findAll({
+			attributes: [
+				'id',
+				'nome',
+				'email',
+				'telefone',
+				'endereco',
+				'created_at',
+				'updated_at',
+			],
+		})
+	} catch (err) {
+		throw err
+	}
 }
 
-
-async function getCliente(cliente_id){
-    try {
-
-        let cli = await ClienteModulo.findByPk(cliente_id)
-        if(!cli){
-            return cli
-        }
-        cli.senha = undefined
-        return cli
-    } catch (err) {
-        throw err
-    }
+async function getCliente(id) {
+	try {
+		return await Cliente.findByPk(id, {
+			attributes: [
+				'id',
+				'nome',
+				'email',
+				'telefone',
+				'endereco',
+				'created_at',
+				'updated_at',
+			],
+		})
+	} catch (err) {
+		throw err
+	}
 }
 
-async function getClienteByEmail(email){
-    try {
-        return  await ClienteModulo.findOne({
-            where: {
-                email
-            }
-        })
-    } catch (err) {
-        throw err
-    }
+async function getClienteByEmail(email) {
+	try {
+		return await Cliente.findOne({
+			where: {
+				email,
+			},
+		})
+	} catch (err) {
+		throw err
+	}
 }
 
 export default {
-    createCliente,
-    updateCliente,
-    deleteCliente,
-    getClientes,
-    getCliente,
-    getClienteByEmail
+	createCliente,
+	updateCliente,
+	deleteCliente,
+	getClientes,
+	getCliente,
+	getClienteByEmail,
 }

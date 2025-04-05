@@ -1,34 +1,39 @@
-import Sequelize from 'sequelize'
+import { INTEGER, DATE, STRING, DECIMAL } from 'sequelize'
 import db from '../connections/db.connection.js'
-import ClienteModulo from '../modules/cliente.modulo.js'
-import LivroModulo from '../modules/livro.modulo.js'
-import livroRepository from '../repositories/livro.repository.js'
+import { Cliente, Livro } from './index.js'
 
-const Venda = db.define('venda',{
-    venda_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true
-    },
-    valor: {
-        type: Sequelize.NUMBER,
-        allowNull: false
-    },
-    data: {
-        type: Sequelize.DATE,
-        allowNull: false
-    },
-    cliente_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-    },
-    livro_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-    }
-}, { tableName: 'vendas', underscored: true })
+const Venda = db.define(
+	'venda',
+	{
+		id: {
+			type: INTEGER,
+			autoIncrement: true,
+			primaryKey: true,
+		},
+		data: {
+			type: DATE,
+			allowNull: false,
+		},
+		cliente_id: {
+			type: INTEGER,
+			allowNull: false,
+		},
+		livro_id: {
+			type: INTEGER,
+			allowNull: false,
+		},
+		valor: {
+			type: DECIMAL(10, 2),
+			allowNull: false,
+		},
+	},
+	{ tableName: 'vendas', underscored: true }
+)
 
-Venda.belongsTo(ClienteModulo, { foreignKey: 'cliente_id' })
-Venda.hasMany(LivroModulo, { foreignKey: 'livro_id', as: 'vendas'} )
+Venda.belongsTo(Cliente, { foreignKey: 'cliente_id' })
+Cliente.hasMany(Venda, { foreignKey: 'cliente_id' })
+
+Venda.belongsTo(Livro, { foreignKey: 'livro_id' })
+Livro.hasMany(Venda, { foreignKey: 'livro_id' })
+
 export default Venda

@@ -1,55 +1,74 @@
 import ClienteService from '../services/cliente.service.js'
-import basicAuth from 'basic-auth'
 
-async function createCliente(req, res, next){
-    try {
-        let cliente = req.body
-        res.status(200).send(JSON.stringify(await ClienteService.createCliente(cliente)))
-    } catch (err) {
-        next(err)
-    }
+async function createCliente(req, res, next) {
+	try {
+		const cliente = req.body
+		if (!cliente.nome) {
+			return res.status(404).json({ error: 'Nome do cliente não informado!' })
+		}
+		if (!cliente.email) {
+			return res.status(404).json({ error: 'Email cliente não informado!' })
+		}
+		if (!cliente.senha || !cliente.confirm_senha) {
+			return res
+				.status(404)
+				.json({ error: 'Senha e ou confirmação da senha não inforda!' })
+		}
+		logger.info(`POST - /cliente`)
+		return res.send(await ClienteService.createCliente(cliente))
+	} catch (err) {
+		next(err)
+	}
 }
 
-async function updateCliente(req, res, next){
-    try {
-        let clienteLogado = basicAuth(req)
-
-        let cliente = req.body
-        res.send(await ClienteService.updateCliente(cliente, clienteLogado.name))
-    } catch (err) {
-        next(err)
-    }
+async function updateCliente(req, res, next) {
+	try {
+		const cliente = req.body
+		if (!cliente.nome) {
+			return res.status(404).json({ error: 'Nome do cliente não informado!' })
+		}
+		if (!cliente.email) {
+			return res.status(404).json({ error: 'Email cliente não informado!' })
+		}
+		logger.info(`PUT - /cliente`)
+		return res.send(await ClienteService.updateCliente(cliente))
+	} catch (err) {
+		next(err)
+	}
 }
 
-async function deleteCliente(req, res, next){
-    try {
-        await ClienteService.deleteCliente(req.params.cliente_id)
-        res.status(200).send(`O cliente com ID ${req.params.cliente_id} foi deletado com sucesso!`)
-    } catch (err) {
-        next(err)
-    }
+async function deleteCliente(req, res, next) {
+	try {
+		const { id } = req.params
+		logger.info(`DELETE - /cliente/${id}`)
+		return res.send(await ClienteService.deleteCliente(id))
+	} catch (err) {
+		next(err)
+	}
 }
 
-async function getClientes(req, res, next){
-    try {
-        res.send(await ClienteService.getClientes())       
-    } catch (err) {
-        next(err)
-    }
+async function getClientes(req, res, next) {
+	try {
+		logger.info(`GET - /cliente - Todos os clientes`)
+		return res.send(await ClienteService.getClientes())
+	} catch (err) {
+		next(err)
+	}
 }
 
-async function getCliente(req, res, next){
-    try {
-        res.send(await ClienteService.getCliente(req.params.cliente_id))
-    } catch (err) {
-        next(err)
-    }
+async function getCliente(req, res, next) {
+	try {
+		const { id } = req.params
+		return res.send(await ClienteService.getCliente(id))
+	} catch (err) {
+		next(err)
+	}
 }
 
 export default {
-    createCliente,
-    updateCliente,
-    deleteCliente,
-    getClientes,
-    getCliente
+	createCliente,
+	updateCliente,
+	deleteCliente,
+	getClientes,
+	getCliente,
 }

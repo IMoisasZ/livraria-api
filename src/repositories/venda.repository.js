@@ -1,81 +1,73 @@
-import VendaModulo from '../modules/venda.modulo.js'
-import LivroModulo from '../modules/livro.modulo.js'
-import AutorModulo from '../modules/autor.modulo.js'
+import { Venda, Livro, Cliente, Autor } from '../modules/index.js'
 
-async function createVenda(venda){
-    try {
-        let v = await VendaModulo.create(venda)
-        return await getVenda(v.venda_id)
-
-    } catch (err) {
-        throw err
-    }
+async function createVenda(venda) {
+	try {
+		const { id } = await Venda.create(venda)
+		return await getVenda(id)
+	} catch (err) {
+		throw err
+	}
 }
 
-async function getVenda(venda_id){
-    try {
-        return VendaModulo.findByPk(venda_id)
-    } catch (err) {
-        throw err
-    }
+async function getVenda(id) {
+	try {
+		return Venda.findByPk(id, {
+			include: [
+				{
+					model: Cliente,
+					attributes: ['nome', 'email'],
+				},
+				{
+					model: Livro,
+					attributes: ['nome'],
+					include: {
+						model: Autor,
+						attributes: ['nome', 'email'],
+					},
+				},
+			],
+		})
+	} catch (err) {
+		throw err
+	}
 }
 
-async function getVendas(){
-    try {
-        return VendaModulo.findAll()
-    } catch (err) {
-        throw err
-    }
-}
-
-async function getVendaByClienteId(cliente_id){
-    try {
-        return VendaModulo.findAll({
-            where:{
-                cliente_id
-            }
-        })
-    } catch (err) {
-        throw err
-    }
-}
-
-async function getVendaByLivroId(livro_id){
-    try {
-        return await VendaModulo.findAll({
-            where:{
-                livro_id
-            }
-        })
-    } catch (err) {
-        throw err
-    }
-}
-
-async function getVendaByAutorId(autor_id){
-    try {
-        return await VendaModulo.findAll({
-            include:[
-                {
-                    model: LivroModulo,
-                    as: 'vendas',
-                    foreignKey: 'livro_id',
-                        where:{
-                            autor_id
-                        }
-                }
-            ]
-        })
-    } catch (err) {
-        throw err
-    }
+async function getVendas(filtros) {
+	try {
+		return Venda.findAll({
+			where:
+				filtros.id === 1
+					? { cliente_id: Number(filtros.cliente_id) }
+					: filtros.id === 2
+					? { livro_id: Number(filtros.livro_id) }
+					: filtros.id === 3
+					? {
+							cliente_id: Number(filtros.cliente_id),
+							livro_id: Number(filtros.livro_id),
+					  }
+					: {},
+			include: [
+				{
+					model: Cliente,
+					attributes: ['nome', 'email'],
+				},
+				{
+					model: Livro,
+					attributes: ['nome'],
+					include: {
+						model: Autor,
+						attributes: ['nome', 'email'],
+					},
+				},
+			],
+		})
+	} catch (err) {
+		throw err
+	}
 }
 
 export default {
-    createVenda,
-    getVenda,
-    getVendas,
-    getVendaByClienteId,
-    getVendaByLivroId,
-    getVendaByAutorId
+	createVenda,
+	getVenda,
+	getVendas,
 }
